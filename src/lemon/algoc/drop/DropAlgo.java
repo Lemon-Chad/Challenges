@@ -66,7 +66,6 @@ public class DropAlgo {
         // Sets up empty paths for tracing a path later -->
 
         Path[] path = new Path[enviro.height * enviro.width];
-        System.out.println(enviro.height + " " + enviro.width);
 
         for (int y = 0; y < enviro.height; y++) for (int x = 0; x < enviro.width; x++)
                 path[toLine(x, y)] = new Path(x, y);
@@ -98,8 +97,6 @@ public class DropAlgo {
             }
 
             if (start.getY() == enviro.height - 1) break; // If at the bottom now, break
-
-            System.out.println(left.getX() + " " + left.getY());
 
             // Move left and right pointers
             pair3 = moveTo(start, left, -1, path);
